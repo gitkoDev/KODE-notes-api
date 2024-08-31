@@ -58,4 +58,11 @@ http://localhost:8080/api/v1/notes
 
 ## Yandex.Speller integration
 
+<p>
+<img src="https://github.com/gitkoDev/KODE-test-task/blob/main/speller.png">
+</p>
+
+<p>
+<img src="https://github.com/gitkoDev/KODE-test-task/blob/main/note.png">
+</p>
 
