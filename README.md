@@ -6,7 +6,7 @@ There is `KODE.postman_collection.json` Postman collection file in root director
 
 ## Startup guide
 
-Run `make run` in root folder to apply all necessary migrations and start the project.
+Run `make run` or `docker compose up --build `in root folder to apply all necessary migrations and start the project.
 
 ## Endpoints
 
