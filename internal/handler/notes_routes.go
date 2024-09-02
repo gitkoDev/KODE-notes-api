@@ -26,14 +26,13 @@ func (h *Handler) addNote(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// note_id, err := h.storage.AddNote(userIdInt, input)
 	note_id, err := h.service.Notes.AddNote(userIdInt, input)
 	if err != nil {
 		helpers.RespondWithError(w, err, http.StatusBadRequest)
 		return
 	}
 
-	helpers.RespondWithJSON(w, note_id, http.StatusCreated)
+	helpers.RespondWithJSON(w, map[string]int{"id": note_id}, http.StatusCreated)
 }
 
 func (h *Handler) getNotes(w http.ResponseWriter, r *http.Request) {
@@ -44,7 +43,6 @@ func (h *Handler) getNotes(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// notes, err := h.storage.GetAllNotes(userIdInt)
 	notes, err := h.service.Notes.GetAllNotes(userIdInt)
 	if err != nil {
 		helpers.RespondWithError(w, err, http.StatusBadRequest)

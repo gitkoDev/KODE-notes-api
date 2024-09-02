@@ -21,7 +21,6 @@ func (h *Handler) signUp(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// id, err := h.storage.CreateUser(input)
 	id, err := h.service.Auth.CreateUser(input)
 	if err != nil {
 		helpers.RespondWithError(w, err, http.StatusBadRequest)
@@ -44,7 +43,6 @@ func (h *Handler) signIn(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// id, err := h.storage.CheckForUserExistence(input.Name, input.Password)
 	id, err := h.service.Auth.CheckForUserExistence(input.Name, input.Password)
 	if err != nil {
 		helpers.RespondWithError(w, err, http.StatusBadRequest)
@@ -57,7 +55,6 @@ func (h *Handler) signIn(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// token, err := h.storage.GenerateToken(input.Name, input.Password)
 	token, err := h.service.Auth.GenerateToken(input.Name, input.Password)
 	if err != nil {
 		helpers.RespondWithError(w, err, http.StatusInternalServerError)
