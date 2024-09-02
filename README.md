@@ -4,6 +4,10 @@ Golang Notes REST API built on `Clean Architecure` and `Dependency Injection` pr
 There is `KODE.postman_collection.json` Postman collection file in root directory for API testing.
 
 
+## Startup guide
+
+Run `make run` in root folder to apply all necessary migrations and start the project.
+
 ## Endpoints
 
 ### Authorization
